@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="icon" href="imgs/icon.png">
+
+    <link rel="prerender" href="profile_en.html">
+    <link rel="prerender" href="works_en.html">
+    <link rel="prerender" href="index.html">
+
+    <title>Goto Toshiaki's Home Page</title>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <div class="vs_header">
+            <img src="imgs/icon.png" class="icon">
+            <div class="vs_title">
+                index.html - Goto Toshiaki (student) - Virtual Studio Kosen
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <img src="imgs/file.svg" class="side_icon" onclick="slide(0)">
+            <img src="imgs/lupe.svg" class="side_icon" onclick="slide(1)">
+            <img src="imgs/branch.svg" class="side_icon" onclick="slide(2)">
+            <img src="imgs/debug.svg" class="side_icon" onclick="slide(3)">
+            <img src="imgs/expantion.svg" class="side_icon" onclick="slide(4)">
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    explorer
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='index_en.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>index</h1>
+                    <p>This page is index page.</p>
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='profile_en.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>profile</h1>
+                    <p>This page describes my profile.</p>
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='works_en.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>works</h1>
+                    <p>This page describes what I have created.</p>
+                </div>
+            </div>
+
+            <div class="link_button" onclick="slide(4)" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>Change Lunguage</h1>
+                    <p>You can switch languages ​​here.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    search
+                </div>
+
+                <input class="search_box" id="search_box_id"
+                 type="text" placeholder="search">
+
+                <div class="search_result">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    user manage
+                </div>
+
+                <div style="margin-top:5%;">
+
+                </div>
+
+                <input class="search_box" id="user_box_id"
+                 type="text" placeholder="UserName">
+
+                 <input class="search_box" id="pass_box_id"
+                 type="password" placeholder="PassWord">
+
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    Run and debug:Run
+                </div>
+
+                <div class="do_and_debug" 
+                onclick="alert('error')">
+                    <div>
+                        Run and debug
+                    </div>
+                </div>
+
+                <div class="do_and_debug_text">
+                    The run and debug buttons are
+                    <span style="color:rgb(44, 134, 255)">
+                        decoration
+                    </span>
+                    ．
+                </div>
+
+                <div class="do_and_debug_text">
+                    <span style="color:rgb(44, 134, 255)">
+                        it's just a look
+                    </span>．
+                </div>
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    Switch lunguage
+                </div>
+                <div class="do_and_debug" onclick="location.href='index_en.html'" >
+                    <div>
+                        日本語に変更
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vs_sub_bar">
+            <div class="file_tab">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    index.html ×
+                </div>
+            </div>
+            <a class="file_tab pass" href="profile_en.html">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    profile.html
+                </div>
+            </a>
+            <a class="file_tab pass" href="works_en.html">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    works.html
+                </div>  
+            </a>
+        </div>
+
+        <div class="breadcrumb">       
+            <a href="index_en.html">
+                <img src="imgs/html_icon.png" class="file_icon">
+                index.html
+            </a>
+            
+        </div>
+    </header>
+
+    <div class="main_window" id="main_window">
+        <div class="text_zone">
+            <h1> Welcome!!!</h1>
+            <p>This is Goto Toshiaki's Home Page．You can browse other pages from the tabs above．</p>
+            <p>Each page introduces</p>
+            <ul>
+                <li>profile</li>
+                <li>events</li>
+            </ul>
+            <p>and etc...</p>
+        </div>
+
+        <div style="text-align: center;">
+            <video src="imgs/pen.mp4" 
+            width="1000vh" 
+            type="video/mp4" loop autoplay muteds
+            style="position: relative;right:0%; top:0%; z-index:-1; opacity: 0.3; 
+            transform: translateY(-50%);">
+        </div>
+        
+        
+    </div>
+
+
+
+    <footer>
+        <div class="vs_footer">
+            <div style="display:table-cell; vertical-align: middle;">
+                <img src="imgs/branch.svg" height="18px" style="padding-top:3px;padding-left:3px;box-sizing: border-box;">
+                <div style="float: right; margin-top:5%; transform: translateX(20%);">main</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="load_one" style="display: none;" title="works_en.html">
+    </div>
+
+    <div id="load_two" style="display: none;" title="profile_en.html">
+    </div>
+</body>
+
+<script src="js/index.js"></script>
+</html>

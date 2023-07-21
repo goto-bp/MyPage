@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="icon" href="imgs/icon.png">
+
+    <link rel="prerender" href="profile.html">
+    <link rel="prerender" href="works.html">
+
+    <title>Goto Toshiakiのホームページ</title>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <div class="vs_header">
+            <img src="imgs/icon.png" class="icon">
+            <div class="vs_title">
+                index.html - 後藤 智顯 (学生) - Virtual Studio Kosen
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <img src="imgs/file.svg" class="side_icon" onclick="slide(0)">
+            <img src="imgs/lupe.svg" class="side_icon" onclick="slide(1)">
+            <img src="imgs/branch.svg" class="side_icon" onclick="slide(2)">
+            <img src="imgs/debug.svg" class="side_icon" onclick="slide(3)">
+            <img src="imgs/expantion.svg" class="side_icon" onclick="slide(4)">
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    工クスプローラー
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='index.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>index</h1>
+                    <p>このページは目次のページです</p>
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='profile.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>profile</h1>
+                    <p>このページは私のプロフィールについて記述しています</p>
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='works.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>works</h1>
+                    <p>このページは私が作ってきたもの等について記述しています</p>
+                </div>
+            </div>
+
+            <div class="link_button" onclick="slide(4)" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>Change Lunguage</h1>
+                    <p>ここでは言語の切り替えを行えます</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    検索
+                </div>
+
+                <input class="search_box" id="search_box_id"
+                 type="text" placeholder="検索">
+
+                <div class="search_result">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    ユーザ管理
+                </div>
+
+                <div style="margin-top:5%;">
+
+                </div>
+
+                <input class="search_box" id="user_box_id"
+                 type="text" placeholder="ユーザー名">
+
+                 <input class="search_box" id="pass_box_id"
+                 type="password" placeholder="パスワード">
+
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    実行とデバッグ:実行
+                </div>
+
+                <div class="do_and_debug" 
+                onclick="alert('error')">
+                    <div>
+                        実行とデバッグ
+                    </div>
+                </div>
+
+                <div class="do_and_debug_text">
+                    実行とデバッグのボタンは
+                    <span style="color:rgb(44, 134, 255)">
+                        飾りです
+                    </span>
+                    ．
+                </div>
+
+                <div class="do_and_debug_text">
+                    <span style="color:rgb(44, 134, 255)">
+                        見た目だけです
+                    </span>．
+                </div>
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    言語切り替え
+                </div>
+                <div class="do_and_debug" onclick="location.href='index_en.html'" >
+                    <div>
+                        Switch English
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vs_sub_bar">
+            <div class="file_tab">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    index.html ×
+                </div>
+            </div>
+            <a class="file_tab pass" href="profile.html">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    profile.html
+                </div>
+            </a>
+            <a class="file_tab pass" href="works.html">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    works.html
+                </div>  
+            </a>
+        </div>
+
+        <div class="breadcrumb">       
+            <a href="index.html">
+                <img src="imgs/html_icon.png" class="file_icon">
+                index.html
+            </a>
+            
+        </div>
+    </header>
+
+    <div class="main_window" id="main_window">
+        <div class="text_zone">
+            <h1> Welcome!!!</h1>
+            <p>ここはGoto Toshiakiのホームページです．上のタブから他のページを見て回ることができます．</p>
+            <p>それぞれのページは</p>
+            <ul>
+                <li>プロフィール</li>
+                <li>出来事</li>
+            </ul>
+            <p>等を紹介しています</p>
+        </div>
+
+        <div style="text-align: center;">
+            <video src="imgs/pen.mp4" 
+            width="1000vh" 
+            type="video/mp4" loop autoplay muteds
+            style="position: relative;right:0%; top:0%; z-index:-1; opacity: 0.3; 
+            transform: translateY(-50%);">
+        </div>
+        
+        
+    </div>
+
+
+
+    <footer>
+        <div class="vs_footer">
+            <div style="display:table-cell; vertical-align: middle;">
+                <img src="imgs/branch.svg" height="18px" style="padding-top:3px;padding-left:3px;box-sizing: border-box;">
+                <div style="float: right; margin-top:5%; transform: translateX(20%);">main</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="load_one" style="display: none;" title="works.html">
+    </div>
+
+    <div id="load_two" style="display: none;" title="profile.html">
+    </div>
+</body>
+
+<script src="js/index.js"></script>
+</html>

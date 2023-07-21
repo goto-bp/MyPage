@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/profile.css">
+    
+    <link rel="icon" href="imgs/icon.png">
+    
+    <link rel="prerender" href="index.html">
+    <link rel="prerender" href="works.html">
+    <link rel="prerender" href="profile_en.html">
+    
+
+    <title>Goto Toshiakiのホームページ</title>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/profile.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <div class="vs_header">
+            <img src="imgs/icon.png" class="icon">
+            <div class="vs_title">
+                profile.html - 後藤 智顯 (高専生) - Virtual Studio Kosen
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <img src="imgs/file.svg" class="side_icon" onclick="slide(0)">
+            <img src="imgs/lupe.svg" class="side_icon" onclick="slide(1)">
+            <img src="imgs/branch.svg" class="side_icon" onclick="slide(2)">
+            <img src="imgs/debug.svg" class="side_icon" onclick="slide(3)">
+            <img src="imgs/expantion.svg" class="side_icon" onclick="slide(4)">
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    工クスプローラー
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='index.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>index</h1>
+                    <p>このページは目次のページです</p>
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='profile.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>profile</h1>
+                    <p>このページは私のプロフィールについて記述しています</p>
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='works.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>works</h1>
+                    <p>このページは私が作ってきたもの等について記述しています</p>
+                </div>
+            </div>
+
+            <div class="link_button" onclick="slide(4)" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>Change Lunguage</h1>
+                    <p>ここでは言語の切り替えを行えます</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    検索
+                </div>
+
+                <input class="search_box" id="search_box_id"
+                 type="text" placeholder="検索">
+
+                <div class="search_result">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    ユーザ管理
+                </div>
+
+                <div style="margin-top:5%;">
+
+                </div>
+
+                <input class="search_box" id="user_box_id"
+                 type="text" placeholder="ユーザー名">
+
+                 <input class="search_box" id="pass_box_id"
+                 type="password" placeholder="パスワード">
+
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    実行とデバッグ:実行
+                </div>
+
+                <div class="do_and_debug" 
+                onclick="alert('403error')">
+                    <div>
+                        実行とデバッグ
+                    </div>
+                </div>
+
+                <div class="do_and_debug_text">
+                    実行とデバッグのボタンは
+                    <span style="color:rgb(44, 134, 255)">
+                        飾りです
+                    </span>
+                    ．
+                </div>
+
+                <div class="do_and_debug_text">
+                    <span style="color:rgb(44, 134, 255)">
+                        見た目だけです
+                    </span>．
+                </div>
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    言語切り替え
+                </div>
+                <div class="do_and_debug" onclick="location.href='profile_en.html'" >
+                    <div>
+                        Switch English
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vs_sub_bar">
+            <a class="file_tab pass" href="index.html">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    index.html
+                </div>
+            </a>
+            <div class="file_tab">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    profile.html ×
+                </div>
+            </div>
+            <a class="file_tab pass" href="works.html">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    works.html
+                </div>  
+            </a>
+        </div>
+
+        <div class="breadcrumb">       
+            <a href="index.html">
+                <img src="imgs/html_icon.png" class="file_icon">
+                profile.html
+            </a>
+            
+        </div>
+    </header>
+
+    <div class="main_window" id="main_window">
+        <div class="text_zone">
+            <div class="index_box">
+                <h1>マップ</h1>
+                <ul>
+                    <li>
+                        <a href="#profile"onclick="change_breadcrumb_news('profile')">
+                            プロフィール
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#history"onclick="change_breadcrumb_news('history')">
+                            今までしてきたこと
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#lunguage"onclick="change_breadcrumb_news('lunguage')">
+                            使用可能な言語
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#can_use"onclick="change_breadcrumb_news('can_use')">
+                            使うことができるもの
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#license"onclick="change_breadcrumb_news('license')">
+                            保有資格
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#study"onclick="change_breadcrumb_news('study')">
+                            現在勉強中のもの
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#future"onclick="change_breadcrumb_news('future')">
+                            今後やってみたいもの
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <h1 id="profile" class="index">後藤 智顯 プロフィール</h1>
+            <ul>
+                <li>情報工学科4年</li>
+                <li>ロボット研究部所属</li>
+            </ul>
+            
+            <h1 id="history" class="index">今までしてきたこと</h1>
+            <ul>
+                <li>2020年</li>
+                大分高専入学 ロボット研究部入部
+                <li>2021年</li>
+                倒立振子ロボットの試験の一部を担当
+                <li>2022年</li>
+                高専ロボコン2022九州地区大会Aチーム
+                ピットクルー(メインプログラマー)
+                <li>2023年</li>
+                情報工学科第4学年在籍中 ロボット研究部ではインフラ系等を担当
+            </ul>
+
+            <h1 id="lunguage" class="index">使用可能な言語</h1>
+            <ul>
+                <li>C,C++</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>C#</li>
+                <li>BASIC</li>
+                少しだけ
+                <li>Brainfu*k</li>
+                少しだけ
+            </ul>
+
+            <h1 id="can_use" class="index">使うことができるもの</h1>
+            <ul>
+                <li>Git, GitHub</li>
+                <li>HTML,CSS</li>
+                <li>Visual Studio Code</li>
+                <li>Unity</li>
+                <li>Unreal Engine</li>
+                <li>Dxlib</li>
+                <li>Ubuntu</li>
+            </ul>
+
+            <h1 id="license" class="index">保有資格</h1>
+            <ul>
+                <li>第一種普通自動車免許</li>
+            </ul>
+
+            <h1 id="study" class="index">現在勉強中のもの</h1>
+            <ul>
+                <li>基本情報技術者</li>
+                <li>MakeFile</li>
+                <li>docker</li>
+                <li>AWS</li>
+            </ul>
+
+            <h1 id="future" class="index">今後やってみたいこと</h1>
+            <ul>
+                <li>VSCode拡張機能開発</li>
+                <li>サーバーサイドの勉強</li>
+                <li>Rustについて勉強</li>
+                <li>Go言語の勉強</li>
+                <li>CMakeについて勉強</li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="vs_footer">
+            <div style="display:table-cell; vertical-align: middle;">
+                <img src="imgs/branch.svg" height="18px" style="padding-top:3px;padding-left:3px;box-sizing: border-box;">
+                <div style="float: right; margin-top:5%; transform: translateX(20%);">main</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="load_one" style="display: none;" title="works.html">
+    </div>
+
+    <div id="load_two" style="display: none;" title="profile.html">
+    </div>
+</body>
+
+<script src="js/index.js"></script>
+</html>

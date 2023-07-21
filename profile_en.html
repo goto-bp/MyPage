@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+    <link rel="icon" href="imgs/icon.png">
+
+    <link rel="prerender" href="index_en.html">
+    <link rel="prerender" href="works_en.html">
+    <link rel="prerender" href="profile.html">
+
+    <title>Goto Toshiaki's Home Page</title>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/profile.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <div class="vs_header">
+            <img src="imgs/icon.png" class="icon">
+            <div class="vs_title">
+                profile.html - Goto Toshiaki (student) - Virtual Studio Kosen
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <img src="imgs/file.svg" class="side_icon" onclick="slide(0)">
+            <img src="imgs/lupe.svg" class="side_icon" onclick="slide(1)">
+            <img src="imgs/branch.svg" class="side_icon" onclick="slide(2)">
+            <img src="imgs/debug.svg" class="side_icon" onclick="slide(3)">
+            <img src="imgs/expantion.svg" class="side_icon" onclick="slide(4)">
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    explorer
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='index_en.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>index</h1>
+                    <p>This page is index page.</p>
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='profile_en.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>profile</h1>
+                    <p>This page describes my profile.</p>
+                </div>
+            </div>
+            <div class="link_button" onclick="location.href='works_en.html'" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>works</h1>
+                    <p>This page describes what I have created.</p>
+                </div>
+            </div>
+
+            <div class="link_button" onclick="slide(4)" style="cursor: pointer;">
+                <div class="text_box">
+                    <h1>Change Lunguage</h1>
+                    <p>You can switch languages ​​here.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    search
+                </div>
+
+                <input class="search_box" id="search_box_id"
+                 type="text" placeholder="search">
+
+                <div class="search_result">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    user manage
+                </div>
+
+                <div style="margin-top:5%;">
+
+                </div>
+
+                <input class="search_box" id="user_box_id"
+                 type="text" placeholder="UserName">
+
+                 <input class="search_box" id="pass_box_id"
+                 type="password" placeholder="PassWord">
+
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    Run and debug:Run
+                </div>
+
+                <div class="do_and_debug" 
+                onclick="alert('error')">
+                    <div>
+                        Run and debug
+                    </div>
+                </div>
+
+                <div class="do_and_debug_text">
+                    The run and debug buttons are
+                    <span style="color:rgb(44, 134, 255)">
+                        decoration
+                    </span>
+                    ．
+                </div>
+
+                <div class="do_and_debug_text">
+                    <span style="color:rgb(44, 134, 255)">
+                        it's just a look
+                    </span>．
+                </div>
+            </div>
+        </div>
+
+        <div class="file">
+            <div class="side_title">
+                <div class="side_title_text">
+                    Switch lunguage
+                </div>
+                <div class="do_and_debug" onclick="location.href='profile.html'" >
+                    <div>
+                        日本語に変更
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vs_sub_bar">
+            <a class="file_tab pass" href="index_en.html">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    index.html
+                </div>
+            </a>
+            <div class="file_tab">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    profile.html ×
+                </div>
+            </div>
+            <a class="file_tab pass" href="works_en.html">
+                <div class="file_name">
+                    <img src="imgs/html_icon.png" class="file_icon">
+                    works.html
+                </div>  
+            </a>
+        </div>
+
+        <div class="breadcrumb">       
+            <a href="profile_en.html">
+                <img src="imgs/html_icon.png" class="file_icon">
+                profile.html
+            </a>
+            
+        </div>
+    </header>
+
+    <div class="main_window" id="main_window">
+        <div class="text_zone">
+            <div class="index_box">
+                <h1>Map</h1>
+                <ul>
+                    <li>
+                        <a href="#profile"onclick="change_breadcrumb_news('profile')">
+                            Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#history"onclick="change_breadcrumb_news('history')">
+                            Career
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#lunguage"onclick="change_breadcrumb_news('lunguage')">
+                            Available languages
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#can_use"onclick="change_breadcrumb_news('can_use')">
+                            what can be used
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#license"onclick="change_breadcrumb_news('license')">
+                            qualification
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#study"onclick="change_breadcrumb_news('study')">
+                            currently studying
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#future"onclick="change_breadcrumb_news('future')">
+                            Things I want to do in the future
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <h1 id="profile" class="index">Goto Toshiaki Profile</h1>
+            <ul>
+                <li>Information Engineering 4th year</li>
+                <li>Belongs to Robot Research Department</li>
+            </ul>
+            
+            <h1 id="history" class="index">Career</h1>
+            <ul>
+                <li>2020年</li>
+                Entered Oita National College of Technology Joined Robot Research Club
+                <li>2021年</li>
+                Responsible for part of the testing of an inverted pendulum robot
+                <li>2022年</li>
+                Kosen Robocon 2022 Kyushu Area Tournament Team A Pit crew (main programmer)
+                <li>2023年</li>
+                Currently enrolled in the 4th year of the Department of Information Engineering.<br> Responsible for infrastructure systems in the Robot Research Department
+            </ul>
+
+            <h1 id="lunguage" class="index">Available languages</h1>
+            <ul>
+                <li>C,C++</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>C#</li>
+                <li>BASIC</li>
+                A little
+                <li>Brainfu*k</li>
+                A little
+            </ul>
+
+            <h1 id="can_use" class="index">what can be used</h1>
+            <ul>
+                <li>Git, GitHub</li>
+                <li>HTML,CSS</li>
+                <li>Visual Studio Code</li>
+                <li>Unity</li>
+                <li>Unreal Engine</li>
+                <li>Dxlib</li>
+                <li>Ubuntu</li>
+            </ul>
+
+            <h1 id="license" class="index">qualification</h1>
+            <ul>
+                <li>First Class Ordinary Car License</li>
+            </ul>
+
+            <h1 id="study" class="index">currently studying</h1>
+            <ul>
+                <li>Basic Information Technician</li>
+                <li>MakeFile</li>
+                <li>docker</li>
+                <li>AWS</li>
+            </ul>
+
+            <h1 id="future" class="index">Things I want to do in the future</h1>
+            <ul>
+                <li>VSCode extension development</li>
+                <li>server side study</li>
+                <li>Study Rust</li>
+                <li>Study Go Lunguage</li>
+                <li>Study CMake</li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="vs_footer">
+            <div style="display:table-cell; vertical-align: middle;">
+                <img src="imgs/branch.svg" height="18px" style="padding-top:3px;padding-left:3px;box-sizing: border-box;">
+                <div style="float: right; margin-top:5%; transform: translateX(20%);">main</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="load_one" style="display: none;" title="works_en.html">
+    </div>
+
+    <div id="load_two" style="display: none;" title="profile_en.html">
+    </div>
+</body>
+
+<script src="js/index.js"></script>
+</html>
