@@ -1,10 +1,5 @@
 let is_open = [false, false, false, false, false];
 
-if (navigator.userAgent.match(/iPhone|Android.+Mobile/))
-{
-    alert("This site is not supported on mobile devices.");
-}
-
 slide(0);
 
 let file_names= [
