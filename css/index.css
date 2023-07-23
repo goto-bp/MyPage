@@ -343,3 +343,13 @@ html
 {
     color:rgb(14, 99, 156);
 }
+
+.text_zone>ul>a
+{
+    color:rgb(44, 134, 255);
+}
+
+.text_zone>ul>a:hover
+{
+    color:rgb(14, 99, 156);
+}
